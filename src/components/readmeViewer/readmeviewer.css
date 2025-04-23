@@ -1,0 +1,11 @@
+.markdown-content {
+    color: #eee;
+    font-family: "Fira Code", monospace;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+  
+  .markdown-content h1 {
+    font-size: 2rem;
+    color: #ff4081;
+  }

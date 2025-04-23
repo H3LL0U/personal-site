@@ -1,4 +1,4 @@
-img{
+.main_image{
    margin-left: 5%;
    margin-bottom: 5%;
    width: 100%;
@@ -46,7 +46,6 @@ div:has(> .logo){
 .logo {
     width: 100%;
     text-align: center;
-    cursor: pointer;
     float: left;
     font-size: 2em;
     color: #fff;

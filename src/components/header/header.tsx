@@ -1,12 +1,12 @@
 import "./header.css"
-import ProfileImage from "../../assets/H3LL0U.png"
-function Header({ name, children }: { name: string; children: React.ReactNode }) {
+function Header({ name, children ,style = {}, img_src = ""}: 
+  { name: string , children: React.ReactNode , style?: React.CSSProperties; img_src?:string }) {
 
     return (
       <>
-      <header className="header">
+      <header className="header" style={style}>
         <div className="img-container">
-          <img src={ProfileImage} alt={`${name} profile picture`}/>
+          <img className="main_image" src= {img_src} alt={`${name} profile picture`}/>
         </div>
 
         <div className="header-container">
