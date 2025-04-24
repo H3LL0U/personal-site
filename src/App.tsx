@@ -6,6 +6,8 @@ import MagisterPy from "./assets/MagisterPy.png";
 import Footer from "./components/footer/footer";
 import HookImg from "./assets/favicon.ico"
 import ScrollableCard from "./components/ScrollableCard/ScrollableCard";
+import { SocialIcon } from "react-social-icons";
+import "./animations.css"
 function Profile() {
   let headerbgcolor = "#232324"
   let mainsectionbgcolor = "#111111"
@@ -32,7 +34,10 @@ function Profile() {
     </Header>
     <ColorTransition from={headerbgcolor} to={mainsectionbgcolor} height="50px"></ColorTransition>
     
-    <ContentSection label="Whoami" label_style={{fontSize: "4em"}}>
+    <ContentSection label= {<> <span className="fly-back-container">
+  Whoami
+  <span className="fly-back fly-away">?</span>
+</span></>} label_style={{fontSize: "4em", userSelect:"none"}}>
       
     <ContentSection label="">
       
@@ -71,10 +76,10 @@ function Profile() {
         { label:
         <>
           <a href="https://github.com/users/H3LL0U/projects/8" target="_blank">
-          <h1 style={ {textAlign:"center", display:"flex", justifyContent:"center"}}>
-                <img src={HookImg} alt="Hook" style={{ width: "5%", minWidth:"75px"}} />
-                 Phishing awareness website
-                <img src={HookImg} alt="Hook" style={{ width: "5%", minWidth:"75px"}} />
+          <h1 style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <img src={HookImg} alt="Hook" style={{ maxWidth: "3%", height: "auto" }} />
+              Phishing awareness website
+            <img src={HookImg} alt="Hook" style={{ maxWidth: "3%", height: "auto" }} />
           </h1>
           </a>
         </>
@@ -98,14 +103,37 @@ function Profile() {
           
          </Card>
           },
-        { label: <h1>Escape from dystopiania</h1>, 
-          content: <Card style={{}}>
+        { label: <a href="https://github.com/H3LL0U/Shadow-game-prjct"><h1>Shadow game: Escape from dystopia</h1> </a>, 
+          content: <Card style={{margin:"auto"}}>
             <div style={{display:"flex", justifyContent:"center"}}>
           <img src="https://raw.githubusercontent.com/H3LL0U/Shadow-game-prjct/refs/heads/main/assets/sprites/Characters/main_character/stationary%20no%20borders%20guy.png" alt="main character"  style={{width:"15%"}}/>
           <img src="https://raw.githubusercontent.com/H3LL0U/Shadow-game-prjct/refs/heads/main/assets/sprites/Characters/military%20man/static%20military%20man.png" alt="main character"  style={{width:"15%"}}/>
           </div>
-          </Card>},
-        // ... more items
+          <div>
+          <h2>What is Shadow Game: Escape from Dystopia?</h2>
+    <p><strong>Shadow Game: Escape from Dystopia</strong> is a 2D stealth and puzzle game made with the godot engine played from a top-down perspective. In the game, you play as an unnamed protagonist who must escape from the oppressive and dystopian land of Dystopiania to the free, utopian world of Utopiania.</p>
+    <h2>Core Gameplay</h2>
+    <p>At its core, <strong>Shadow Game: Escape from Dystopia</strong> is about using stealth and strategy to overcome obstacles. Players must rely on their environment to help them hide and avoid being seen. Tools such as keys and bushes are used to either hide or unlock doors that help progress through the levels.</p>
+    <p>Throughout the game, players need to time their movements carefully, using stealth to move undetected by patrolling guards. The game often includes monologues and dialogues between the protagonist and guards, and uses dry humor.</p>
+
+    <h2>Game Environment</h2>
+    <p>The game is set on the borders of different countries, featuring a variety of environments, such as buildings, wire fences, and dense bushes. You must use the objects on each level to your advantage in order to progress through the levels.</p>
+
+    <h2>Target Audience</h2>
+    <p><strong>Shadow Game: Escape from Dystopia</strong> is primarily aimed at teenagers but is suitable for all players who enjoy a blend of stealth, puzzle-solving, and storytelling. Though it is not very long (around 15 minutes) it can still be fun.</p>
+
+          </div>
+          </Card>},{
+            label: <h1>And more...</h1>,
+            content: <Card style={{justifyContent:"center", textAlign: "center", margin:"auto", alignItems: 'center' }}><h1>You can find more projects if you visit my github</h1> 
+            <SocialIcon 
+            network="github" 
+            href="https://github.com/H3LL0U" 
+            style={{ width: "30vw", height: "30vw" }} 
+          /> </Card>
+          }
+
+        
       ]}
 />
     </ContentSection>

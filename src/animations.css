@@ -1,0 +1,16 @@
+.fly-back {
+    position: relative;
+    display: inline-block;
+    transition: transform 1s ease, opacity 1s ease;
+    will-change: transform, opacity;
+  
+    /* Default: off-screen and invisible */
+    transform: translate(200px, -200px) rotate(720deg);
+    opacity: 0;
+  }
+  
+  /* When the parent is hovered, bring it back */
+  .fly-back-container:hover .fly-back {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }

@@ -2,7 +2,7 @@ import React from "react"
 
 import { CSSProperties } from "react"
 
-function ContentSection({label, children, style = {} , label_style ={}}:{label:string, children?:React.ReactNode, style?:React.CSSProperties, label_style?:CSSProperties}){
+function ContentSection({label, children, style = {} , label_style ={}}:{label:React.ReactNode, children?:React.ReactNode, style?:React.CSSProperties, label_style?:CSSProperties}){
 
     let default_mainpage_style: React.CSSProperties = {
         display: "flex",

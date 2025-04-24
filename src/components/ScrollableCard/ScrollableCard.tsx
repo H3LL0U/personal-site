@@ -140,7 +140,7 @@ const ScrollableCard: React.FC<CardProps> = ({
               style={{
                 overflow: "hidden", // Hide anything that overflows horizontally
                 width: "100%", // Ensure it fills the parent width
-                textOverflow:"clip"
+                
               }}
             >
               <div

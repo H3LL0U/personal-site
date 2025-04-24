@@ -40,4 +40,5 @@ a:hover {
 }
 html{
     background-color: #585454;
+    overflow-x: hidden;
 }
