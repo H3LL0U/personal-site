@@ -13,7 +13,7 @@ interface Prop{
     icon_container_style?: CSSProperties
     contact_links?: ContactLink[]
 }
-const Footer = ({name ="",children,style, contact_links = [], icon_container_style = {}}:Prop) => {
+const Footer = ({style, contact_links = [], icon_container_style = {}}:Prop) => {
 
     let default_style:CSSProperties ={
             display: "flex",
