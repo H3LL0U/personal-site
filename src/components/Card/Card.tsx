@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ title = "", children, style = {} }) => {
     justifyContent: 'center',
     alignContent: 'center',
     flexDirection: "column",
-    margin: "5%",
+    margin: "auto",
 
     ...style,
   };
