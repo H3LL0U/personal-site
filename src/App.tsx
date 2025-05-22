@@ -42,8 +42,10 @@ function Profile() {
     <ContentSection label="">
       
     </ContentSection>  
+
     <ScrollableCard
       title="My projects"
+      //content is stored like this: [{label:..., content:... }, {...}]
       content={[
         { label:
         <>
@@ -73,10 +75,11 @@ function Profile() {
       <h2 className="text">How Does It Work?</h2>
       <p>Once installed, MagisterPy allows you to log in to your Magister account and easily retrieve your schedule and grades. It simplifies these tasks, so you don’t have to manually navigate the Magister platform. With just a few simple commands, you can access all the information you need.</p>
         </Card>},
+        /// new card
         { label:
         <>
           <a href="https://github.com/users/H3LL0U/projects/8" target="_blank">
-          <h1 style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <h1 >
             <img src={HookImg} alt="Hook" style={{ maxWidth: "3%", height: "auto" }} />
               Phishing awareness website
             <img src={HookImg} alt="Hook" style={{ maxWidth: "3%", height: "auto" }} />
@@ -100,9 +103,53 @@ function Profile() {
     
     <p>Through this process, the project aims to help users better identify phishing attempts and learn how to protect themselves online.</p>
     
-          
+        
          </Card>
-          },
+
+
+
+      },
+          /// new card
+      {
+            label:<><a href="https://github.com/H3LL0U/Vaultwyr" target="_blank"><h1>Vaultwyr</h1> </a>
+            </>,
+            content: <Card>
+              <h1 >Vaultwyr: A Lightweight Encryption Tool</h1>
+
+              <h2 className="text">What's Vaultwyr?</h2>
+              <p>
+                Vaultwyr is a simple tool that lets you encrypt and decrypt your files using a password of your choice. It's handy for locking down documents, notes, or anything else you'd prefer to keep private.
+              </p>
+
+              <h2 className="text">Built with Tauri</h2>
+              <p>
+                Vaultwyr is made with Tauri, which helps keep it lightweight and fast. The frontend is built using React and TypeScript, while the backend uses Rust for security and performance.
+              </p>
+
+              <h2 className="text">What It Does (Right Now)</h2>
+              <p>
+                You can use Vaultwyr to encrypt single files or entire folders. It uses password-based encryption with AES behind the scenes, so your data is safe as long as your password is. 
+              </p>
+
+              <h2 className="text">How It Works</h2>
+              <p>
+                Open the app, pick a file or folder, Select "Encrypt" option type in your password and you are good to go. That’s it. To unlock it later, just do the same thing in but choose "Decrypt instead". It’s designed to be straightforward and beginner-friendly.
+              </p>
+
+              <h2 className="text">Getting Started</h2>
+              <p>
+                Vaultwyr is still in early development, but you can already download the latest build or clone the project from GitHub and build it yourself.
+              </p>
+
+              <h2 className="text">Still a Work in Progress</h2>
+              <p>
+                This project is still in early development, so be patient for more features!
+              </p>
+              </Card>
+      },
+
+      /// new card
+
         { label: <a href="https://github.com/H3LL0U/Shadow-game-prjct"><h1>Shadow game: Escape from dystopia</h1> </a>, 
           content: <Card style={{margin:"auto"}}>
             <div style={{display:"flex", justifyContent:"center"}}>
@@ -111,19 +158,21 @@ function Profile() {
           </div>
           <div>
           <h2>What is Shadow Game: Escape from Dystopia?</h2>
-    <p><strong>Shadow Game: Escape from Dystopia</strong> is a 2D stealth and puzzle game made with the godot engine played from a top-down perspective. In the game, you play as an unnamed protagonist who must escape from the oppressive and dystopian land of Dystopiania to the free, utopian world of Utopiania.</p>
-    <h2>Core Gameplay</h2>
-    <p>At its core, <strong>Shadow Game: Escape from Dystopia</strong> is about using stealth and strategy to overcome obstacles. Players must rely on their environment to help them hide and avoid being seen. Tools such as keys and bushes are used to either hide or unlock doors that help progress through the levels.</p>
-    <p>Throughout the game, players need to time their movements carefully, using stealth to move undetected by patrolling guards. The game often includes monologues and dialogues between the protagonist and guards, and uses dry humor.</p>
+          <p><strong>Shadow Game: Escape from Dystopia</strong> is a 2D stealth and puzzle game made with the godot engine played from a top-down perspective. In the game, you play as an unnamed protagonist who must escape from the oppressive and dystopian land of Dystopiania to the free, utopian world of Utopiania.</p>
+          <h2>Core Gameplay</h2>
+          <p>At its core, <strong>Shadow Game: Escape from Dystopia</strong> is about using stealth and strategy to overcome obstacles. Players must rely on their environment to help them hide and avoid being seen. Tools such as keys and bushes are used to either hide or unlock doors that help progress through the levels.</p>
+          <p>Throughout the game, players need to time their movements carefully, using stealth to move undetected by patrolling guards. The game often includes monologues and dialogues between the protagonist and guards, and uses dry humor.</p>
 
-    <h2>Game Environment</h2>
-    <p>The game is set on the borders of different countries, featuring a variety of environments, such as buildings, wire fences, and dense bushes. You must use the objects on each level to your advantage in order to progress through the levels.</p>
+          <h2>Game Environment</h2>
+          <p>The game is set on the borders of different countries, featuring a variety of environments, such as buildings, wire fences, and dense bushes. You must use the objects on each level to your advantage in order to progress through the levels.</p>
 
-    <h2>Target Audience</h2>
-    <p><strong>Shadow Game: Escape from Dystopia</strong> is primarily aimed at teenagers but is suitable for all players who enjoy a blend of stealth, puzzle-solving, and storytelling. Though it is not very long (around 15 minutes) it can still be fun.</p>
+          <h2>Target Audience</h2>
+          <p><strong>Shadow Game: Escape from Dystopia</strong> is primarily aimed at teenagers but is suitable for all players who enjoy a blend of stealth, puzzle-solving, and storytelling. Though it is not very long (around 15 minutes) it can still be fun.</p>
 
           </div>
-          </Card>},{
+          </Card>},
+          /// new card
+          {
             label: <h1>And more...</h1>,
             content: <Card style={{justifyContent:"center", textAlign: "center", margin:"auto", alignItems: 'center' }}><h1>You can find more projects if you visit my github</h1> 
             <SocialIcon 
